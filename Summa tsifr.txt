@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+	long long int a, n;
+	int i = 0;
+	int s = 0;
+	int d;
+	std::cin >> a;
+	n = a;
+	
+	while (n != 0)
+	{
+		n = n/10;
+		i++;
+	}
+	for (int j = i-1; j >= 0; j--)
+	{
+		d = a / (int)pow(10, j);
+		s += d;
+		a = a - d * (int)pow(10, j);
+	}
+	
+	std::cout << s << "\n";
+
+
+	
+
+}
