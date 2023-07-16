@@ -1,0 +1,35 @@
+#include <iostream>
+
+int main()
+{
+	int a, b;
+	std::cin >> a;
+	std::cin >> b;
+	if ((a == 1) || (a == 3) || (a == 5) || (a == 7) || (a == 8) || (a == 10) || (a == 12))
+	{
+		std::cout << 31;
+	}
+	else if ((a == 4) || (a == 6) || (a == 9) || (a == 11))
+	{
+		std::cout << 30;
+	}
+	else if ((b % 400 == 0) && (a == 2))
+	{
+		std::cout << 29;
+	}
+	else if ((b % 100 == 0) && (b % 400 != 0) && (a == 2))
+	{
+		std::cout << 28;
+	}
+	else if ((b % 100 != 0) && (b % 400 != 0) && (b % 4 == 0) && (a == 2))
+	{
+		std::cout << 29;
+	}
+	else
+	{
+		if (a == 2)
+		{
+			std::cout << 28;
+		}
+	}
+}
